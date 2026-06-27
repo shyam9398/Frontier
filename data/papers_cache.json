@@ -1,0 +1,2434 @@
+{
+  "timestamp": 1782575430768,
+  "papers": [
+    {
+      "id": "2606.23835",
+      "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
+      "authors": [
+        "Anindya Mondal",
+        "Sauradip Nag",
+        "Anjan Dutta"
+      ],
+      "pubDate": "Jun 22, 2026",
+      "citations": 3,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Image Generation",
+      "organization": "Independent Research",
+      "summary": "ABACUS is a unified vision-language model that handles object counting, crowd counting, referring-expression counting, and count-faithful image generation without any benchmark-specific training required. Our model is built on existing 3B-parameter unified foundation model and is adapted for object localization tasks using three key innovations: density-aware adaptive zooming with objectness maps for spatial grounding; a boundary-aware count policy via GRPO to eliminate crop-boundary errors; and a cycle-consistent GRPO strategy where the understanding branch self-critiques generated outputs, closing the understanding-generation gap without any external annotations. ABACUS achieves state-of-the-art results across seven benchmarks, outperforming both task-specific specialists and larger generalist models.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 3,
+      "models": [
+        "Image Generation Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GenEval, MS COCO",
+      "benchmarkResults": [
+        {
+          "benchmark": "GenEval",
+          "model": "Flux.1 Pro",
+          "metric": "Alignment Score",
+          "value": "89.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MS COCO",
+          "model": "SD3-Medium",
+          "metric": "FID",
+          "value": "7.24",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "ImageNet",
+          "model": "DiT-XL/2",
+          "metric": "FID-50K",
+          "value": "2.10",
+          "rank": "#5",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "count-faithful image generation"
+      ],
+      "methods": [
+        "vision-language model",
+        "unified foundation model",
+        "cycle-consistent learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.23835.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.23835.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 11
+    },
+    {
+      "id": "2606.26080",
+      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "authors": [
+        "Changdae Oh",
+        "Wendi Li",
+        "Seongheon Park",
+        "Samuel Yeh",
+        "Tanwi Mallick",
+        "Sharon Li"
+      ],
+      "pubDate": "Jun 24, 2026",
+      "citations": 7,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "uw-madison",
+      "summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
+      "stars": 2,
+      "githubRepo": "https://github.com/deeplearning-wisc/progress-advantage",
+      "upvotes": 7,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GAIA (Validation), WebArena",
+      "benchmarkResults": [
+        {
+          "benchmark": "GAIA (Validation)",
+          "model": "Agent-Claude-3.5",
+          "metric": "Accuracy",
+          "value": "42.8%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "WebArena",
+          "model": "Agent-GPT-5",
+          "metric": "Success Rate",
+          "value": "35.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "Agent-Llama-405B",
+          "metric": "Resolve Rate",
+          "value": "32.1%",
+          "rank": "#4",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Agents",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "reinforcement learning",
+        "reward models"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26080.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26080.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 27
+    },
+    {
+      "id": "2606.26875",
+      "title": "Information-Aware KV Cache Compression for Long Reasoning",
+      "authors": [
+        "Jushi Kai",
+        "Zhuiri Xiao",
+        "Alexandra Birch",
+        "Zhouhan Lin"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 9,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Reasoning",
+      "organization": "Independent Research",
+      "summary": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce Forward Influence, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose InfoKV, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 9,
+      "models": [
+        "Reasoning Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "long-context reasoning"
+      ],
+      "methods": [
+        "attention weights"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26875.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26875.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 33
+    },
+    {
+      "id": "2606.27277",
+      "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
+      "authors": [
+        "Junwei Luo",
+        "Shuai Yuan",
+        "Zhenya Yang",
+        "Yansheng Li",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 2,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Reasoning",
+      "organization": "Independent Research",
+      "summary": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.",
+      "stars": 4,
+      "githubRepo": "https://github.com/Luo-Z13/EO-WM",
+      "upvotes": 2,
+      "models": [
+        "Reasoning Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GPQA Diamond, MATH",
+      "benchmarkResults": [
+        {
+          "benchmark": "GPQA Diamond",
+          "model": "Claude 3.5 Sonnet",
+          "metric": "Accuracy",
+          "value": "65.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MATH",
+          "model": "GPT-5 (Preview)",
+          "metric": "Accuracy",
+          "value": "92.4%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "AIME 2026",
+          "model": "Gemini 1.5 Pro",
+          "metric": "Accuracy",
+          "value": "78.5%",
+          "rank": "#4",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GSM8K",
+          "model": "Llama 3.1 405B",
+          "metric": "Accuracy",
+          "value": "96.2%",
+          "rank": "#7",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Reasoning",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "video diffusion transformer",
+        "diffusion models"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.27277.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.27277.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 10
+    },
+    {
+      "id": "2606.27192",
+      "title": "LISA: Likelihood Score Alignment for Visual-condition Controllable Generation",
+      "authors": [
+        "Yanghao Wang",
+        "Hongxu Chen",
+        "Jiazhen Liu",
+        "Zhenqi He",
+        "Rui Liu",
+        "Zhen Wang",
+        "Long Chen"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 13,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Image Generation",
+      "organization": "HKUST",
+      "summary": "The prevalent dual-branch paradigm, i.e., training a side network to encode visual conditions and fusing its intermediate-layer features to a frozen pretrained main network, has shown remarkable success in visual-condition controllable generation. Despite its widespread adoption, the role of the side branch and its training efficiency remain underexplored. In this paper, we first revisit this mainstream paradigm through the lens of score-based generative modeling: 1) The main network preserves visual perceptual quality by providing a prior unconditional score. 2) The side network steers conditional control by implicitly contributing a likelihood score. Guided by this perspective, we propose LIkelihood Score Alignment (LISA), an effective regularization method that explicitly aligns the intermediate feature of the side network with an approximated likelihood score. Specifically, we first hook features from a designated layer of the side network and project them into the score latent space by a lightweight decoder. Then, we construct an approximated likelihood score target and calculate the distance between the decoder's output and this target as an additional regularization loss. Finally, we jointly optimize the side network and decoder with both standard diffusion loss and our regularization loss. Experiments across various image/video tasks, architectures, and diffusion/flow models demonstrated that LISA can not only consistently accelerate the training convergence and improve final synthetic results, but also encourage the side network's features to be more disentangled for conditional modeling with negligible additional training cost and zero extra inference cost.",
+      "stars": 5,
+      "githubRepo": "https://github.com/HKUST-LongGroup/LISA",
+      "upvotes": 13,
+      "models": [
+        "Image Generation Model"
+      ],
+      "datasets": [
+        null
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Image Generation",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "score-based generative modeling",
+        "diffusion models",
+        "flow models",
+        "side network",
+        "joint optimization"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.27192.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.27192.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 52
+    },
+    {
+      "id": "2606.14397",
+      "title": "Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments",
+      "authors": [
+        "Mykola Vysotskyi",
+        "Runqi Lin",
+        "Grzegorz Biziel",
+        "Michal Zakrzewski",
+        "Sebastian Montagna",
+        "Damian Rynczak",
+        "Shreyansh Padarha",
+        "Kumail Alhamoud",
+        "Zihao Fu",
+        "William Lugoloobi",
+        "Kai Rawal",
+        "Hanna Yershova",
+        "Xander Davies",
+        "Taras Rumezhak",
+        "Guohao Li",
+        "Fazl Barez",
+        "Baoyuan Wu",
+        "Arkadiusz Drohomirecki",
+        "Yarin Gal",
+        "Chris Russell",
+        "Christopher Summerfield",
+        "Adam Mahdi",
+        "Volodymyr Karpiv",
+        "Philip Torr",
+        "Adel Bibi"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 15,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Oxford",
+      "summary": "As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities. However, current benchmarks are typically built on popular applications with relatively simple tasks and focus on a narrow set of capabilities while overlooking broader dimensions, resulting in saturated performance on modern agents and failing to probe their limitations. To this end, we introduce GauntletBench, a web-based benchmark for evaluating agent generalisation in challenging scenarios, focusing on three underexplored capabilities (temporal perception, graphical understanding, and 3D reasoning), across five less-covered professional applications (Video Editor, Workflow Builder, 3D Modeller, Flight Analyser, and Circuit Designer), each with 20 vision-intensive tasks (100 in total). Our benchmark provides a modular pipeline that comprises an environment compatible with both open- and closed-source agent frameworks, a controlled web-based application, a well-structured task suite, and an automated evaluation engine with diverse metrics. Contrary to widespread expectations, our empirical results reveal that frontier agentic systems remain far from achieving human-level performance. Even the state-of-the-art agent achieves only a 19.1% success rate on our GauntletBench, highlighting the limitations in these overlooked capabilities and generalisation. By comparison, non-expert human annotators achieve over 80% success on our challenging yet feasible tasks, revealing the substantial gap between current agent capabilities and those required for complex real-world scenarios.",
+      "stars": 1,
+      "githubRepo": "https://github.com/gauntlet-benchmark/evaluation-harness",
+      "upvotes": 15,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GAIA (Validation), WebArena",
+      "benchmarkResults": [
+        {
+          "benchmark": "GAIA (Validation)",
+          "model": "Agent-Claude-3.5",
+          "metric": "Accuracy",
+          "value": "42.8%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "WebArena",
+          "model": "Agent-GPT-5",
+          "metric": "Success Rate",
+          "value": "35.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "Agent-Llama-405B",
+          "metric": "Resolve Rate",
+          "value": "32.1%",
+          "rank": "#4",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "benchmark",
+        "3D reasoning",
+        "web-based benchmark",
+        "vision-intensive tasks"
+      ],
+      "methods": [
+        "Neural Networks",
+        "Fine-Tuning",
+        "Supervised Learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.14397.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.14397.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 56
+    },
+    {
+      "id": "2606.27288",
+      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+      "authors": [
+        "Josef Chen"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 3,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Kaikaku",
+      "summary": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely reports. For any policy whose output is one member model answer, accuracy cannot exceed one minus beta, where beta is the rate at which every model is wrong on the same query. In contrast, the usual diagnostic, average pairwise error correlation rho, cannot identify beta: error laws with identical marginals and pairwise correlations can have different all-wrong rates. A Clopper-Pearson bound on beta gives a finite-sample certificate on the largest gain any router, vote, or cascade could deliver before training a router.\n  Across 67 models from 21 providers, a tetrachoric-calibrated single-factor model still underprices the all-wrong tail: on open-ended mathematics, observed beta is 0.052 versus 0.023 under the full 67-model Gaussian copula, about 2.5 times underpricing, with 90 percent CI 1.7 to 3.4 and k equals 17. The effect recurs on execution-graded code, where beta is 0.079. Re-asking the same GPQA-Diamond questions in free-response rather than multiple-choice form reopens the tail, with beta 0.127 and a five-judge panel with kappa 0.73 to 0.92, locating co-failure in answer format rather than subject. At matched quality, low-rho heterogeneous ensembles beat high-rho Self-MoA, but on checkable tasks in our pool, combining models rarely beats the single best model without a strong query-level routing signal. Gains come from models failing on different questions, not from adding more models.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 3,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        null
+      ],
+      "spaces": [
+        null
+      ],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Agents",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "multi-model LLM systems",
+        "tetrachoric-calibrated model"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.27288.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.27288.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 11
+    },
+    {
+      "id": "2606.16613",
+      "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
+      "authors": [
+        "Issa Sugiura",
+        "Daichi Hattori",
+        "Kazuo Araragi",
+        "Keita Ogawa",
+        "Shota Onose",
+        "Taro Makino",
+        "Teppei Usuki",
+        "Takashi Ishida"
+      ],
+      "pubDate": "Jun 15, 2026",
+      "citations": 7,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Independent Research",
+      "summary": "As LLM agents become capable of increasingly long-horizon tasks, evaluating their performance in economic systems is becoming increasingly important. Unlike existing benchmarks that primarily evaluate a single agent interacting with a passive environment, economic systems are inherently multi-agent, requiring autonomous agents to communicate, negotiate, and transact while pursuing their own objectives over extended periods. We introduce CoffeeBench, a benchmark for evaluating LLM agents in a long-horizon multi-agent economy composed of heterogeneous firms. In CoffeeBench, two farmers, two roasters, and two retailers autonomously operate their businesses over a 90-day simulation, each seeking to maximize cumulative net income through communication and transactions while managing cash, inventory, and pricing. The evaluated model controls one coffee roaster, while the remaining firms are controlled by fixed reference agents. Across several recent open-weight and proprietary LLMs, all models outperform a passive baseline that takes no actions, with most achieving positive net income. Analysis of agent behavior reveals substantial differences in long-horizon economic interaction: higher-performing models communicate more actively with other firms, whereas Claude~Haiku~4.5 exhibits an idle-drift failure mode, repeatedly choosing inaction despite producing coherent assessments and plans. We release our code and agent trajectories to support future research.",
+      "stars": 11,
+      "githubRepo": "https://github.com/SakanaAI/CoffeeBench",
+      "upvotes": 7,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "long-horizon tasks"
+      ],
+      "methods": [
+        "Neural Networks",
+        "Fine-Tuning",
+        "Supervised Learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.16613.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.16613.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 34
+    },
+    {
+      "id": "2606.21795",
+      "title": "Discretizing Reward Models",
+      "authors": [
+        "Vijay Viswanathan",
+        "Shiqi Wang",
+        "Devamanyu Hazarika",
+        "Chirag Nagpal",
+        "Tongshuang Wu",
+        "Graham Neubig",
+        "Yuning Mao"
+      ],
+      "pubDate": "Jun 19, 2026",
+      "citations": 6,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Language Modeling",
+      "organization": "facebook",
+      "summary": "Despite their widespread use, the role of reward models in shaping reinforcement learning is poorly understood. Reward models offer a tempting promise: they automatically estimate response quality in the absence of verifiers or human judges. Unlike \"verifiable rewards\" which typically produce binary scores, reward models typically produce continuous scores, allowing them to be sensitive to fine-grained differences in responses. However, we show this apparent strength is a serious weakness: many popular reward models are oversensitive, assigning different scores to equally good responses. Theoretically, we show that seemingly perfect reward models can be highly oversensitive; empirically, this oversensitivity can lead to bad policies. In place of existing notions of \"reward model accuracy,\" we propose evaluating reward models using distinct measures of \"discriminative ability\" and \"specificity\" (the complement of oversensitivity). As a solution, we describe a training-free algorithm that uses Monte Carlo dropout on any neural reward model to produce discrete reward clusters. Theoretically, we prove there exist discretizations that reduce oversensitivity at minimal expense of discriminative ability; empirically we show, in both controlled and natural RL settings, that discretizing rewards leads to less reward hacking and better policies than training on the original rewards.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 6,
+      "models": [
+        "Language Modeling Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "MMLU (General), GPQA Diamond",
+      "benchmarkResults": [
+        {
+          "benchmark": "MMLU (General)",
+          "model": "GPT-5",
+          "metric": "Accuracy",
+          "value": "88.7%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GPQA Diamond",
+          "model": "Claude 3.5 Sonnet",
+          "metric": "Accuracy",
+          "value": "65.2%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GSM8K",
+          "model": "Llama 3.1 405B",
+          "metric": "Accuracy",
+          "value": "95.6%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "Qwen 2.5 72B",
+          "metric": "Pass@1",
+          "value": "86.6%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Language Modeling",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "reward models",
+        "reinforcement learning",
+        "policy learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.21795.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.21795.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 22
+    },
+    {
+      "id": "2606.18394",
+      "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
+      "authors": [
+        "Lanxiang Hu",
+        "Zhaoxiang Feng",
+        "Yulun Wu",
+        "Haoran Yuan",
+        "Yujie Zhao",
+        "Yu-Yang Qian",
+        "Bojun Wang",
+        "Peng Zhao",
+        "Daxin Jiang",
+        "Yibo Zhu",
+        "Tajana Rosing",
+        "Hao Zhang"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 27,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Language Modeling",
+      "organization": "Independent Research",
+      "summary": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model's autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
+      "stars": 61,
+      "githubRepo": "https://github.com/hao-ai-lab/JetSpec",
+      "upvotes": 27,
+      "models": [
+        "Language Modeling Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Language Modeling",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "autoregressive Large Language Models",
+        "bidirectional block-diffusion"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.18394.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.18394.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 148
+    },
+    {
+      "id": "2606.16517",
+      "title": "How Post-Training Shapes Biological Reasoning Models",
+      "authors": [
+        "Lukas Fesser",
+        "Hanlin Zhang",
+        "Michelle M. Li",
+        "Eric Wang",
+        "Bryan Perozzi",
+        "Shekoofeh Azizi",
+        "Sham M. Kakade",
+        "Marinka Zitnik"
+      ],
+      "pubDate": "Jun 15, 2026",
+      "citations": 3,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Reasoning",
+      "organization": "Independent Research",
+      "summary": "Scientific reasoning models for biology combine language models with foundation models trained on multimodal biological data, including DNA, RNA, and proteins. These models are built through post-training, yet how each stage shapes reasoning and generalization remains poorly understood. We study when post-training improves performance and when it induces over-specialization. Across genomics, transcriptomics, and proteins, we train and evaluate more than 100 biological reasoning models under controlled variation in backbone, continued pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL), measuring both in-domain (ID) and out-of-domain (OOD) performance. We find that each post-training stage reshapes generalization in a distinct way rather than contributing uniform gains. CPT improves downstream performance by aligning models with biological language. SFT consistently increases ID performance but causes OOD performance to peak early and decline as models fit the training distribution. RL, when applied to strong SFT checkpoints with aligned rewards, improves OOD performance and partially recovers generalization. These results show that biological reasoning does not improve monotonically with additional supervision or compute. Instead, performance depends on how training stages are composed. Under fixed post-training budgets, the strongest ID-OOD trade-off comes from brief SFT, larger RL allocations, and asymmetric adaptation capacity across stages.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 3,
+      "models": [
+        null
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GPQA Diamond, MATH",
+      "benchmarkResults": [
+        {
+          "benchmark": "GPQA Diamond",
+          "model": "Claude 3.5 Sonnet",
+          "metric": "Accuracy",
+          "value": "65.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MATH",
+          "model": "GPT-5 (Preview)",
+          "metric": "Accuracy",
+          "value": "92.4%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "AIME 2026",
+          "model": "Gemini 1.5 Pro",
+          "metric": "Accuracy",
+          "value": "78.5%",
+          "rank": "#4",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GSM8K",
+          "model": "Llama 3.1 405B",
+          "metric": "Accuracy",
+          "value": "96.2%",
+          "rank": "#7",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Reasoning",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "language models",
+        "foundation models",
+        "reinforcement learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.16517.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.16517.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 11
+    },
+    {
+      "id": "2606.27326",
+      "title": "Hallucination in World Models is Predictable and Preventable",
+      "authors": [
+        "Nicklas Hansen",
+        "Xiaolong Wang"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 8,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "World Models",
+      "organization": "UCSanDiego",
+      "summary": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we introduce MMBench2, a 427-hour, 210-task dataset for visual world modeling with ground-truth actions, rewards, and live simulators, and train a 350M-parameter world model on it. We identify three distinct hallucination modes: perceptual, action-marginalized, and scene-diverging -- each anchored to a different stage of the pipeline, and develop three signals that accurately predict where the model will fail. To close coverage gaps at training time, we develop a coverage-aware sampling technique; to close them online, our hallucination predictors serve as curiosity rewards for targeted data collection, yielding a data-efficient finetuning recipe that adapts the pretrained world model to entirely unseen environments with as few as 50 real environment trajectories. Overall, our findings reveal that hallucination in world models is inherently a data coverage issue, and that the same signals used to detect it can also be used for mitigation.\n  An interactive web version of our paper is available at https://www.nicklashansen.com/mmbench2",
+      "stars": 37,
+      "githubRepo": "https://github.com/nicklashansen/mmbench2",
+      "upvotes": 8,
+      "models": [
+        "World Models Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "MMLU (General), GPQA Diamond",
+      "benchmarkResults": [
+        {
+          "benchmark": "MMLU (General)",
+          "model": "GPT-5",
+          "metric": "Accuracy",
+          "value": "88.7%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GPQA Diamond",
+          "model": "Claude 3.5 Sonnet",
+          "metric": "Accuracy",
+          "value": "65.2%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "GSM8K",
+          "model": "Llama 3.1 405B",
+          "metric": "Accuracy",
+          "value": "95.6%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "Qwen 2.5 72B",
+          "metric": "Pass@1",
+          "value": "86.6%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "World Models",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "world models",
+        "visual world modeling"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.27326.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.27326.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 59
+    },
+    {
+      "id": "2606.26300",
+      "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
+      "authors": [
+        "Binghai Wang",
+        "Chenlong Zhang",
+        "Dayiheng Liu",
+        "Jiajun Zhang",
+        "Jiawei Chen",
+        "Mouxiang Chen",
+        "Rongyao Fang",
+        "Siyuan Zhang",
+        "Xuwu Wang",
+        "Yuheng Jing",
+        "Zeyao Ma",
+        "Zeyu Cui"
+      ],
+      "pubDate": "Jun 24, 2026",
+      "citations": 38,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Coding Agents",
+      "organization": "Qwen",
+      "summary": "A classical intuition holds that verifying a solution is easier than producing one. For today's coding agents, this intuition is being inverted: as foundation models develop stronger reasoning capabilities and engineering harnesses grow more sophisticated, generating complex candidate solutions is no longer difficult -- reliably verifying them has become the harder problem. Every verifier we can build is only a proxy for human intent, never the intent itself. This makes verification subject to a twofold difficulty: first, intent is underspecified by nature, making it inherently hard to faithfully check whether it has been fulfilled; second, during model training, optimization widens the gap between proxy and intent -- manifesting as reward hacking or signal saturation. To address this, we characterize the quality of verification signals along three dimensions -- scalability, faithfulness, and robustness -- and argue that achieving all three simultaneously is the central challenge. We further study four reward constructions: a test verifier for general coding tasks, a rubric verifier for frontend tasks, the user as verifier for real-world agent tasks, and an automated agent verifier for long-horizon tasks. Across different task types and policy capability levels, we conduct in-depth analysis and experiments on the core challenges of reward design and how to more effectively leverage reward signals. Experiments show that targeted verification design can effectively suppress reward hacking, improve task completion quality, and achieve significant gains across multiple internal and public benchmarks. These experiences collectively point to a core observation: no fixed reward function can remain effective as policy capability continues to grow; and verification must co-evolve with the generator.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 38,
+      "models": [
+        "Coding Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Coding Agents",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "Neural Networks",
+        "Fine-Tuning",
+        "Supervised Learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26300.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26300.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 140
+    },
+    {
+      "id": "2606.24551",
+      "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
+      "authors": [
+        "Xiao Zhou",
+        "Siyue Zhang",
+        "Yilun Zhao",
+        "Jinbiao Wei",
+        "Tingyu Song",
+        "Arman Cohan",
+        "Chen Zhao"
+      ],
+      "pubDate": "Jun 22, 2026",
+      "citations": 25,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Independent Research",
+      "summary": "Computer-use agents can execute software tasks through either graphical interfaces or programmatic command interfaces, but existing evaluations confound interaction modality with differences in tasks, initial states, verifiers, and permitted actions. We introduce a matched execution-layer benchmark of 440 desktop tasks across 18 applications and 12 workflow categories, where screen-only GUI agents and skill-mediated CLI agents receive identical goals, states, and final-state verifiers while being restricted to modality-native actions. In this controlled setting, the strongest GUI agent reaches a 59.1% full pass rate, outperforming the strongest original-skill CLI agent at 48.2%; however, verifier-guided skill augmentation raises CLI success to 69.3%, showing that much of the CLI deficit comes from incomplete skill coverage rather than model capability alone. These results suggest that GUI and CLI expose different execution bottlenecks: GUI agents are limited by reliable grounded interaction over long-horizon workflows, whereas CLI agents are limited by the coverage and scalability of their skill interfaces.",
+      "stars": 1,
+      "githubRepo": "https://github.com/rebeccaz4/gui-vs-cli",
+      "upvotes": 25,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GAIA (Validation), WebArena",
+      "benchmarkResults": [
+        {
+          "benchmark": "GAIA (Validation)",
+          "model": "Agent-Claude-3.5",
+          "metric": "Accuracy",
+          "value": "42.8%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "WebArena",
+          "model": "Agent-GPT-5",
+          "metric": "Success Rate",
+          "value": "35.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "Agent-Llama-405B",
+          "metric": "Resolve Rate",
+          "value": "32.1%",
+          "rank": "#4",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Agents",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "Neural Networks",
+        "Fine-Tuning",
+        "Supervised Learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.24551.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.24551.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 93
+    },
+    {
+      "id": "2606.26027",
+      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+      "authors": [
+        "Yupu Hao",
+        "Zhuoran Jin",
+        "Huanxuan Liao",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "pubDate": "Jun 24, 2026",
+      "citations": 15,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "CASIA",
+      "summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
+      "stars": 2,
+      "githubRepo": "https://github.com/hypasd-art/Tool-RL-Box",
+      "upvotes": 15,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "tool-use tasks"
+      ],
+      "methods": [
+        "agentic reinforcement learning",
+        "learning rates",
+        "exploratory learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26027.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26027.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 57
+    },
+    {
+      "id": "2606.21959",
+      "title": "OpenBioRQ: Unsolved Biomedical Research Questions for Agents",
+      "authors": [
+        "Minbyul Jeong"
+      ],
+      "pubDate": "Jun 20, 2026",
+      "citations": 3,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Independent Research",
+      "summary": "A working citation looks like proof -- but the fact that a link resolves does not mean the cited paper supports the claim. I find that current agentic models rarely fabricate citations (over 99% resolve), yet roughly 15.9% link to the wrong paper. Existing benchmarks miss this failure mode: when a question has a fixed answer key, a model can reproduce the expected source from that key rather than independently verifying that the source supports the claim. I introduce \\openbiorq{}, a retrieval-grounded agentic benchmark of 12{,}553 unsolved biomedical research questions across 12 domains that treats open questions as a faithfulness-and-abstention probe. To my knowledge, this is the first biomedical benchmark to combine an agentic setting -- where the model must issue multiple tool calls -- with unsolved questions that have no answer key. Openness is verified against real follow-up evidence rather than a model's parametric knowledge. Difficulty is empirical: I anchor it on questions that three open-weight reference models fail to answer, rather than on subjective hardness labels. On this hardest subset, held-out models from the same lineage as the difficulty anchors solve only ~17%, while three independent frontier agents (Gemini-3-Pro, Opus-4.7, GPT-5.5) span a wide 29-60% range. The benchmark is thus hard, non-saturating (the best agent still leaves ~33-40\\% unsolved), and discriminating across capability tiers. Beyond difficulty, I observe agentic collapse on the hardest questions, where agents stop using their tools. For the most collapse-prone model, blocking tool access entirely barely changes its score -- so tools stop paying off exactly where they are needed most. A frozen per-question checklist raises inter-judge agreement from Spearman 0.35 to 0.82.",
+      "stars": 1,
+      "githubRepo": "https://github.com/minstar/healthcare-research",
+      "upvotes": 3,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GAIA (Validation), WebArena",
+      "benchmarkResults": [
+        {
+          "benchmark": "GAIA (Validation)",
+          "model": "Agent-Claude-3.5",
+          "metric": "Accuracy",
+          "value": "42.8%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "WebArena",
+          "model": "Agent-GPT-5",
+          "metric": "Success Rate",
+          "value": "35.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "Agent-Llama-405B",
+          "metric": "Resolve Rate",
+          "value": "32.1%",
+          "rank": "#4",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "retrieval-grounded benchmark"
+      ],
+      "methods": [
+        "agentic models",
+        "open-weight models"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.21959.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.21959.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 11
+    },
+    {
+      "id": "2606.26025",
+      "title": "In-Context World Modeling for Robotic Control",
+      "authors": [
+        "Siyin Wang",
+        "Junhao Shi",
+        "Senyu Fei",
+        "Zhaoyang Fu",
+        "Li Ji",
+        "Jingjing Gong",
+        "Xipeng Qiu"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 42,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Robotics",
+      "organization": "OpenMOSS-Team",
+      "summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
+      "stars": 0,
+      "githubRepo": "",
+      "upvotes": 42,
+      "models": [
+        "Robotics Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SIMPLER (Bridge), ALOHA Task Suite",
+      "benchmarkResults": [
+        {
+          "benchmark": "SIMPLER (Bridge)",
+          "model": "RT-Trajectory",
+          "metric": "Success Rate",
+          "value": "87.5%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "ALOHA Task Suite",
+          "model": "ACT (Diffusion)",
+          "metric": "Success Rate",
+          "value": "92.0%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "Ego4D Challenge",
+          "model": "VIMA-Base",
+          "metric": "Success Rate",
+          "value": "64.5%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "task-agnostic interactions"
+      ],
+      "methods": [
+        "Vision-Language-Action models",
+        "world modeling"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26025.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26025.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 155
+    },
+    {
+      "id": "2606.26904",
+      "title": "Confidence-Aware Tool Orchestration for Robust Video Understanding",
+      "authors": [
+        "Yangfan He",
+        "Yujin Choi",
+        "Jaehong Yoon"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 9,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "nanyang-technological-university-singapore",
+      "summary": "Video reasoning language models implicitly assume that every input frame is equally reliable. This leads to what we term the Blind Trust Problem: under realistic perturbations such as motion blur, glare, or occlusion, frontier video reasoning models can suffer 15-30%p accuracy drops on real-world embodied benchmarks, while remaining unaware that their visual evidence has been degraded. To address this challenge, we propose Robust-TO, an agentic video understanding framework that explicitly integrates per-frame trustworthiness into every stage of reasoning. Robust-TO organizes heterogeneous visual perception tools under a unified evidence interface. Each tool receives a sub-query derived from the original question and a set of trustworthy frames selected by the reliability-relevance score. It returns evidence in a shared format: a concrete prediction (e.g., a bounding box, motion trajectory, recognized text, or action label), temporal grounding, and a calibrated reliability score. During reasoning, these calibrated scores guide evidence weighting in a three-tier synthesis process (high/medium/low) and define a confidence-cost GRPO reward that jointly optimizes correctness, evidence reliability, and efficiency. On two video reasoning benchmarks spanning eight tasks, Robust-TO achieves 56.4% average accuracy on clean inputs, surpassing the strongest open-source baseline by 10.6%p and outperforming Gemini-2.5-Pro (46.2%). Under five realistic corruption types, Robust-TO maintains 54.3% average accuracy, 5.8%p above the strongest open-source baseline, while exhibiting the smallest clean-to-corrupted accuracy drop among all compared methods.",
+      "stars": 3,
+      "githubRepo": "https://github.com/ROVA-V2/Robust-TO",
+      "upvotes": 9,
+      "models": [
+        "Agents Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "GAIA (Validation), WebArena",
+      "benchmarkResults": [
+        {
+          "benchmark": "GAIA (Validation)",
+          "model": "Agent-Claude-3.5",
+          "metric": "Accuracy",
+          "value": "42.8%",
+          "rank": "#2",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "WebArena",
+          "model": "Agent-GPT-5",
+          "metric": "Success Rate",
+          "value": "35.4%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "Agent-Llama-405B",
+          "metric": "Resolve Rate",
+          "value": "32.1%",
+          "rank": "#4",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "video reasoning",
+        "video reasoning benchmarks"
+      ],
+      "methods": [
+        "Neural Networks",
+        "Fine-Tuning",
+        "Supervised Learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26904.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26904.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 35
+    },
+    {
+      "id": "2606.27313",
+      "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "authors": [
+        "Xumin Yu",
+        "Zuyan Liu",
+        "Zhenyu Yang",
+        "Yuhao Dong",
+        "Shengsheng Qian",
+        "Jiwen Lu",
+        "Han Hu",
+        "Yongming Rao"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 37,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Multimodal",
+      "organization": "Tencent-Hunyuan",
+      "summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\\%-70\\% acceleration with different base LLMs and training recipes.",
+      "stars": 40,
+      "githubRepo": "https://github.com/yuxumin/ViQ",
+      "upvotes": 37,
+      "models": [
+        "Multimodal Model"
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Multimodal",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "proximal representation learning",
+        "multimodal modeling"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.27313.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.27313.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 168
+    },
+    {
+      "id": "2606.26790",
+      "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Shuo Yang",
+        "Jinyang Wu",
+        "Zhengxi Lu",
+        "Yuhao Shen",
+        "Fan Zhang",
+        "Lang Feng",
+        "Shuai Zhang",
+        "Haoran Luo",
+        "Zheng Lian",
+        "Zhengqi Wen",
+        "Jianhua Tao"
+      ],
+      "pubDate": "Jun 25, 2026",
+      "citations": 40,
+      "references": 0,
+      "source": "arXiv",
+      "isBookmarked": false,
+      "category": "Agents",
+      "organization": "Independent Research",
+      "summary": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose OPID (On-Policy Skill Distillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.",
+      "stars": 35,
+      "githubRepo": "https://github.com/jinyangwu/OPID",
+      "upvotes": 40,
+      "models": [
+        null
+      ],
+      "datasets": [
+        "Custom Dataset"
+      ],
+      "spaces": [],
+      "benchmarks": "SWE-bench Lite, SWE-bench Pro",
+      "benchmarkResults": [
+        {
+          "benchmark": "SWE-bench Lite",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "41.2%",
+          "rank": "#1",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "SWE-bench Pro",
+          "model": "GLM-5.2 (Agentic)",
+          "metric": "Resolve Rate",
+          "value": "28.5%",
+          "rank": "#3",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "HumanEval",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "94.5%",
+          "rank": "#5",
+          "compareUrl": "#"
+        },
+        {
+          "benchmark": "MBPP",
+          "model": "GLM-5.2 (Base)",
+          "metric": "Pass@1",
+          "value": "88.2%",
+          "rank": "#8",
+          "compareUrl": "#"
+        }
+      ],
+      "tasks": [
+        "Agents",
+        "Deep Learning",
+        "Artificial Intelligence"
+      ],
+      "methods": [
+        "reinforcement learning",
+        "policy optimization",
+        "outcome-based reinforcement learning"
+      ],
+      "relatedPapers": [
+        {
+          "title": "Attention Is All You Need",
+          "citations": 180857,
+          "source": "NIPS"
+        },
+        {
+          "title": "Deep Residual Learning for Image Recognition",
+          "citations": 231156,
+          "source": "CVPR"
+        },
+        {
+          "title": "Llama: Open and Foundation Models",
+          "citations": 3450,
+          "source": "arXiv"
+        },
+        {
+          "title": "Generative Adversarial Nets",
+          "citations": 72400,
+          "source": "NIPS"
+        },
+        {
+          "title": "GLM-4: An Open Bilingual Frontier Model",
+          "citations": 890,
+          "source": "arXiv"
+        }
+      ],
+      "citationsList": [
+        {
+          "title": "Scaling Laws for Agentic Systems",
+          "citations": 23,
+          "source": "arXiv"
+        },
+        {
+          "title": "An Overview of Modern Large Language Models",
+          "citations": 84,
+          "source": "arXiv"
+        },
+        {
+          "title": "Evaluating Frontiers in Automated Reasoning",
+          "citations": 12,
+          "source": "arXiv"
+        }
+      ],
+      "pwcThumbnail": "",
+      "hfThumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.26790.png",
+      "arxivThumbnail": "https://arxiv.org/pdf/2606.26790.pdf",
+      "readingTime": "5 min",
+      "popularityScore": 176
+    }
+  ]
+}

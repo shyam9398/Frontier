@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111111;
+  
+  --bg-sub: #FCFCFC;
+  --bg-alt: #FAFAFA;
+  
+  --primary: #FF4D73;
+  --primary-hover: #FF335E;
+  --secondary: #FF4D73;
+  
+  --accent: #FFF0F3;
+  --active: #FFF0F3;
+  --card: #FFFFFF;
+  --border-warm: #ECECEC;
+  --footer: #111111;
+  
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --success: #16A34A;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-bg-sub: var(--bg-sub);
+  --color-bg-alt: var(--bg-alt);
+  
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-active: var(--active);
+  --color-card: var(--card);
+  --color-border-warm: var(--border-warm);
+  --color-footer: var(--footer);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-success: var(--success);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-plus-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: var(--font-plus-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+  
+  --shadow-premium: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --color-brand: #FF4D73;
+  --shadow-card: 0 8px 30px rgba(15, 23, 42, 0.05);
+  --shadow-card-hover: 0 12px 36px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif !important;
+  min-height: 100vh;
+}
+
+body, input, button, select, textarea, div, span, p, a, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Glassmorphism custom classes - adjusted to minimal clean style */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--border-warm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-heavy {
+  background: #FFFFFF;
+  border: 1px solid var(--border-warm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-warm);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Gradient backgrounds for cards and widgets */
+.bg-breakthrough {
+  background: linear-gradient(135deg, #FFF8FA 0%, #FFF5F7 45%, #FFFDFD 100%);
+}
+
+.bg-rising {
+  background: linear-gradient(135deg, #FFFBFC 0%, #FFF9FB 100%);
+}
+
+.bg-sota {
+  background: linear-gradient(135deg, #F8FCF9 0%, #F4FAF6 100%);
+}
+
+.bg-github {
+  background: linear-gradient(135deg, #FFFCFA 0%, #FFF8F4 100%);
+}
+
+.bg-x-widget {
+  background: linear-gradient(135deg, #FCFCFD 0%, #F8F9FB 100%);
+}
+
+.bg-reddit-widget {
+  background: linear-gradient(135deg, #FFFBF8 0%, #FFF7F2 100%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
